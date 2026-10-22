@@ -40,7 +40,7 @@ export default function App() {
 
   const save = () => {
     const d: Deal = { id: crypto.randomUUID(), name: name.trim() || `Deal ${deals.length + 1}`, inputs: i, saved: Date.now() }
-    setDeals([d, ...deals]); setName(''); setToast('Saved, Chairman.')
+    setDeals([d, ...deals]); setName(''); setToast('Saved.')
   }
   const share = async (n: string, inp: Inputs) => {
     const text = c.shareText(n, inp)
@@ -60,7 +60,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <header><h1>Back of a Napkin</h1><p className="sub">Quick math, Chairman. Dig deeper or pass.</p></header>
+      <header><h1>Back of a Napkin</h1><p className="sub">Quick math. Dig deeper or pass.</p></header>
 
       {tab === 'napkin' && <main className="paper">
         <div className="grid">
